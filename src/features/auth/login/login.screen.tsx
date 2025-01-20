@@ -27,7 +27,7 @@ export const LoginScreen = () => {
       localStorage.setItem("access_token", response.accessToken);
     },
     onSuccess: () => {
-      navigate({ to: "/home" });
+      navigate({ to: "/auctions" });
     },
     onError: (error) => {
       const errorMessage = getErrorMessage(error);
