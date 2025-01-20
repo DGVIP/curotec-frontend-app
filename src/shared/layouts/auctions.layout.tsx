@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "@tanstack/react-router";
 import { Link, Outlet } from "@tanstack/react-router";
 
 export const AuctionsLayout = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
     localStorage.removeItem("access_token");
-    window.location.href = "/login";
+    navigate({ to: "/login" });
   };
 
   return (
