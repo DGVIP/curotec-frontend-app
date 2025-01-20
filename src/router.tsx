@@ -4,12 +4,13 @@ import {
   createRootRoute,
   redirect,
 } from "@tanstack/react-router";
+
+import { AuctionsLayout } from "./shared/layouts/auctions.layout";
 import { LoginScreen } from "./features/auth/login/login.screen";
 import { RegisterScreen } from "./features/auth/register/register.screen";
 import { CreateAuctionScreen } from "./features/auction/create-auction/create-auction.screen";
 import { AuctionListScreen } from "./features/auction/auction-list/auction-list.screen";
 import { AuctionDetailsScreen } from "./features/auction/auction-details/auction-details.screen";
-import { AuctionsLayout } from "./shared/layouts/auctions.layout";
 import { CurrentUserAuctionListScreen } from "./features/auction/current-user-auction-list/current-user-auction-list.screen";
 
 const getIsUserAuthenticated = () => !!localStorage.getItem("access_token");

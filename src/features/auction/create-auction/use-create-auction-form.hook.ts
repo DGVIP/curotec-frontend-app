@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { useFieldArray, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useFieldArray, useForm } from "react-hook-form";
 
 const schema = z.object({
   title: z.string().min(1),
@@ -11,7 +11,7 @@ const schema = z.object({
         startPrice: z.string().min(1),
         startTime: z.string().min(1),
         endTime: z.string().min(1),
-      }),
+      })
     )
     .min(1, "Auction must have at least one item"),
 });

@@ -4,6 +4,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { getErrorMessage } from "@/shared/utils/get-error-message";
 import {
   Form,
   FormControl,
@@ -13,9 +14,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-import { LoginFormOutput, useLoginForm } from "./use-login-form.hook";
 import { loginRequest, LoginRequestParams } from "./login.request";
-import { getErrorMessage } from "@/shared/utils/get-error-message";
+import { LoginFormOutput, useLoginForm } from "./use-login-form.hook";
 
 export const LoginScreen = () => {
   const form = useLoginForm();

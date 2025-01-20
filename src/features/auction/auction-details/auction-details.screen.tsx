@@ -1,14 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
+import { useParams } from "@tanstack/react-router";
+
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+import { CreateBidForm } from "./create-bid-form/create-bid-form";
 import {
   AuctionItemData,
   BidHistoryData,
   getAuctionRequest,
 } from "./get-auction.request";
-import { useParams } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
-import { CreateBidForm } from "./create-bid-form/create-bid-form";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const AuctionDetailsScreen = () => {
   const auctionId = useParams({ from: "/auctions/$auctionId" }).auctionId;

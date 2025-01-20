@@ -1,22 +1,42 @@
-# Curotec Auction App - Frontend
+# Project Setup
 
-This is the frontend application for the Curotec Auction App.
+## Prerequisites
 
-## Getting Started
+- Node.js v22.x
+- pnpm v9.x
 
-### Prerequisites
+## Steps
 
-- Node.js (v22.x)
-- pnpm (v9.x)
+1. Clone the repository
 
-### Installation
+2. Create a `.env` file in the root taking the `.env.example` as a reference
 
-```bash
-pnpm install
-```
+3. Install dependencies
 
-### Running the Development Server
+   ```bash
+   pnpm install
+   ```
 
-```bash
-pnpm run dev
-```
+4. Start the server
+
+   ```bash
+   pnpm run dev
+   ```
+
+# Design decisions
+
+Implemented the following screens:
+
+- Authentication flow
+  - register
+  - login
+- Auctions:
+  - general auctions list
+  - current user auctions list
+  - create auction
+  - auction details
+
+Missing features:
+
+- Notifications section for auctions and bids
+- Edit auctions

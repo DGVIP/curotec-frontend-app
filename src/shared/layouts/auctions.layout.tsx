@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "@tanstack/react-router";
 import { Link, Outlet } from "@tanstack/react-router";
+
+import { Button } from "@/components/ui/button";
 
 export const AuctionsLayout = () => {
   const navigate = useNavigate();
